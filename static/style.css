@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+}
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+.submit-button {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.reset-button {
+    background-color: #757575;
+    color: white;
+}
+.submit-button:hover,
+.reset-button:hover {
+    opacity: 0.9;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+
+.gender-options label {
+    font-weight: normal;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}

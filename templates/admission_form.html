@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Admission Application</h1>
+    
+        <div class="form-container">
+
+        <h1>Student Admission Form</h1>
+
+        <form method="POST" action="/save">
+
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="date_of_birth">Date of Birth:</label>
+                <input
+                    type="date"
+                    id="date_of_birth"
+                    name="date_of_birth"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+
+                <div class="gender-options">
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            required
+                        >
+                        Male
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Female"
+                        >
+                        Female
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="reset" class="reset-button">Reset</button>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>
