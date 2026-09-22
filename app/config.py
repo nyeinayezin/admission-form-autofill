@@ -11,6 +11,11 @@ APPLICANT_FILE = DATA_DIR / "applicant.txt"
 
 # Database_sql folder
 SQL_DIR = BASE_DIR / "database_sql"
+# Templates Folder
+TEMPLATE_DIR = BASE_DIR/"templates"
+# Pdf #
+PDF_TEMPLATE = TEMPLATE_DIR/"school_application_form_template.pdf"
+PDF_OUTPUT_DIR = BASE_DIR/"generated_pdfs"
 
 
 

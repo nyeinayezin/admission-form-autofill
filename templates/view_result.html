@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Applicant Result</title>
+</head>
+
+<body>
+
+    <h1>Applicant Information</h1>
+    applicants
+    {% for applicant in applicants %}
+
+        <h2>Student Information</h2>
+
+        <p>Student ID: {{ applicant.student_id }}</p>
+        <p>Name: {{ applicant.first_name }} {{ applicant.last_name }}</p>
+        <p>Date of Birth: {{ applicant.date_of_birth }}</p>
+        <p>Gender: {{ applicant.gender }}</p>
+
+        <h2>Guardian Information</h2>
+        {% for guardian in applicant.guardians %}
+         <h3>{{guardian.relationship}}</h3>
+        <p>Guardian ID: {{ guardian.guardian_id }}</p>
+        <p>Name: {{ guardian.first_name }} {{guardian.last_name}}</p>
+        <p>Phone: {{ guardian.phone }}</p>
+        <p>Email: {{ guardian.email }}</p>
+        <p>Address: {{ guardian.address }}</p>
+        <p>Emergency Contact: {{ guardian.is_primary_contact }}</p>
+        {% endfor %}
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>

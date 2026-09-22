@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Student</title>
+</head>
+
+<body>
+
+    <h1>Student Successfully Saved</h1>
+
+    <h2>Student Information</h2>
+
+    <p>
+        Student ID:
+        {{ applicant.student_id }}
+    </p>
+
+    <p>
+        Name:
+        {{ applicant.first_name }} {{ applicant.last_name }}
+    </p>
+
+    <p>
+        Date of Birth:
+        {{ applicant.date_of_birth }}
+    </p>
+
+    <p>
+        Gender:
+        {{ applicant.gender }}
+    </p>
+
+
+    <h2>Guardian Information</h2>
+
+    {% for guardian in applicant.guardians %}
+
+        <h3>Guardian {{ loop.index }}</h3>
+
+        <p>
+            Name:
+            {{ guardian.first_name }}
+            {{ guardian.last_name }}
+        </p>
+
+        <p>
+            Phone:
+            {{ guardian.phone }}
+        </p>
+
+        <p>
+            Email:
+            {{ guardian.email }}
+        </p>
+
+        <p>
+            Address:
+            {{ guardian.address }}
+        </p>
+
+        <p>
+            Relationship:
+            {{ guardian.relationship }}
+        </p>
+
+        <p>
+            Primary Contact:
+            {% if guardian.is_primary_contact == 1 %}
+                Yes
+            {% else %}
+                No
+            {% endif %}
+        </p>
+
+    {% endfor %}
+
+</body>
+</html>

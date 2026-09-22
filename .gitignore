@@ -5,9 +5,11 @@ __pycache__/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
-*$py.class
+# Admission Form Autofill project
+# Generated PDF output
+generated_pdfs/
 
-# C extensions
+# C extensionsca
 *.so
 
 # Distribution / packaging
